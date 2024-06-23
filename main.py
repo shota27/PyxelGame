@@ -1,5 +1,3 @@
-#迷路ゲーム
-
 #効果音については敵に当たった時に効果音がなる
 import pyxel
 import random

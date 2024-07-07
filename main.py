@@ -10,6 +10,7 @@ SCENE_GAMECLEAR=3
 class Dragon:
     #初期化
     def __init__(self):
+        #初期座標
         self.x = pyxel.rndi(30, 100)
         self.y = 10
         self.life=3
@@ -26,7 +27,7 @@ class Dragon:
       
     #敵役を動かす関数
     def move(self):
-        #敵によってスコアが変わる
+        #敵によって速さが変わる
         if self.type==1:
             self.y+=3
         elif self.type==2:
@@ -45,7 +46,7 @@ class Dragon:
         self.x+=random.choice(self.dragon_x_list)
         
         if self.type == 1:
-            pyxel.blt(self.x,self.y,0,16,16,16,16)
+            pyxel.blt(self.x,self.y,0,16,16,16,16)#敵役を描くpyxelの関数
         elif self.type == 2:
             pyxel.blt(self.x,self.y,0,32,16,16,16)
       
